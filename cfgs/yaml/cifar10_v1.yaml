@@ -22,7 +22,7 @@ max_per_class: 2000
 exp_dir: results/pretrained
 pretrained_ckpt_path: results/pretrained/model.pth_E8
 resume_ckpt_path: results/pretrained/model.pth_E8
-test_ckpt_path: results/pretrained/model.pth_best
+test_ckpt_path: results/pretrained/model.pth_E6
 
 ## tensorboard
 display_img: 12

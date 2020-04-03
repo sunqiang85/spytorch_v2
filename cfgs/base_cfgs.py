@@ -37,7 +37,7 @@ class Cfgs(PATH):
 
     @property
     def ckpt_path(self):
-        return "{}/model.pth_best".format(self.exp_dir)
+        return "{}/model.pth".format(self.exp_dir)
 
     @property
     def log_path(self):
@@ -74,7 +74,7 @@ class Cfgs(PATH):
 
 
         if not os.path.exists(self.exp_dir):
-            os.mkdir(self.EXP_DIR)
+            os.mkdir(self.exp_dir)
 
 
     def init_seed(self):

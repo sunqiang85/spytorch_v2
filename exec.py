@@ -127,7 +127,7 @@ class Engine:
                     correct[k] += batch_correct[:, :k].sum().item()
                 tq.set_postfix(loss='{:.4f}'.format(loss.item()), comp='{}'.format(batch_idx * len(data)))
             for k in correct:
-                self.logger.tensorboard.add_scalar("eval_acc{}_{}".format(k, self.__C.mode), correct[k]/len(val_loader), self.cur_iter)
+                self.logger.tensorboard.add_scalar("eval_acc{}_{}".format(k, self.__C.mode), correct[k]/len(val_loader.dataset), self.cur_iter)
             self.logger.tensorboard.add_image("eval_input_images_{}".format(self.__C.mode), data[epoch]*0.5+0.5, self.cur_iter)
             self.logger.tensorboard.add_image("eval_grid_images_{}".format(self.__C.mode), torchvision.utils.make_grid(data*0.5+0.5, nrow=4, normalize=False), self.cur_iter)
 
